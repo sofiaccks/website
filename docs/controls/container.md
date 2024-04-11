@@ -563,55 +563,7 @@ Where to open URL in the web mode. Value is of `UrlTarget` enum:
 
 ### `on_click`
 
-Fires when a user clicks the container. Event object `e` is an instance of `ContainerTapEvent` class:
-
-```python
-class ft.ContainerTapEvent():
-    local_x: float
-    local_y: float
-    global_x: float
-    global_y: float
-```
-
-:::info
-If `ink` is `True`, `e` will be plain `ControlEvent` with empty `data` instead of `ContainerTapEvent`.
-:::
-
-A simple usage example:
-
-```python
-import flet as ft
-
-def main(page: ft.Page):
-    page.vertical_alignment = ft.MainAxisAlignment.CENTER
-    page.horizontal_alignment = ft.CrossAxisAlignment.CENTER
-
-    t = ft.Text()
-
-    def container_click(e: ft.ContainerTapEvent):
-        t.value = f"local_x: {e.local_x}\nlocal_y: {e.local_y}\nglobal_x: {e.global_x}\nglobal_y: {e.global_y}"
-        t.update()
-
-    page.add(
-        ft.Column(
-            [
-                ft.Container(
-                    content=ft.Text("Clickable inside container"),
-                    alignment=ft.alignment.center,
-                    bgcolor=ft.colors.GREEN_200,
-                    width=200,
-                    height=200,
-                    border_radius=10,
-                    on_click=container_click,
-                ),
-                t,
-            ],
-            horizontal_alignment=ft.CrossAxisAlignment.CENTER,
-        ),
-    )
-
-ft.app(target=main)
-```
+Fires when a user clicks the container. Will not be fired on long press.
 
 ### `on_hover`
 
@@ -637,3 +589,53 @@ ft.app(target=main)
 ### `on_long_press`
 
 Fires when the container is long-pressed.
+
+### `on_tap_down`
+
+Fires when a user clicks the container with or without a long press. Event object `e` is an instance
+of `ContainerTapEvent` class with the following properties:
+
+* `local_x` - the x-coordinate of the tap relative to the container
+* `local_y` - the y-coordinate of the tap relative to the container
+* `global_x` - the x-coordinate of the tap relative to the page
+* `global_y` - the y-coordinate of the tap relative to the page
+
+:::info
+If `ink` is `True`, `e` will be plain `ControlEvent` with empty `data` instead of `ContainerTapEvent`.
+:::
+
+A simple usage example:
+
+```python
+import flet as ft
+
+def main(page: ft.Page):
+    page.vertical_alignment = ft.MainAxisAlignment.CENTER
+    page.horizontal_alignment = ft.CrossAxisAlignment.CENTER
+
+    def on_long_press(e):
+        print("on long press")
+        page.add(ft.Text("on_long_press triggered"))
+
+    def on_click(e):
+        print("on click")
+        page.add(ft.Text("on_click triggered"))
+
+    def on_tap_down(e: ft.ContainerTapEvent):
+        print("on tap down", e.local_x, e.local_y)
+        page.add(ft.Text("on_tap_down triggered"))
+
+    c = ft.Container(
+        bgcolor=ft.colors.RED,
+        content=ft.Text("Test Long Press"),
+        height=100,
+        width=100,
+        on_click=on_click,
+        on_long_press=on_long_press,
+        on_tap_down=on_tap_down,
+    )
+    
+    page.add(c)
+
+ft.app(target=main)
+```
