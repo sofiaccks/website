@@ -156,8 +156,9 @@ directly in your console (without breaking your app).
   to [`on_cancel`](https://flet.dev/docs/controls/popupmenubutton/#on_cancel)
 - [`foreground_image_url`](https://flet.dev/docs/controls/circleavatar/#foreground_image_url)
   and [`background_image_url`](https://flet.dev/docs/controls/circleavatar/#background_image_url) properties
-  of [`CircleAvatar`](https://flet.dev/docs/controls/circleavatar/) were renamed to `foreground_image_src`
-  and `background_image_src` respectively
+  of [`CircleAvatar`](https://flet.dev/docs/controls/circleavatar/) were renamed
+  to [`foreground_image_src`](https://flet.dev/docs/controls/circleavatar/#foreground_image_src)
+  and [`background_image_src`](https://flet.dev/docs/controls/circleavatar/#background_image_src) respectively
 - `DragTargetAcceptEvent` used in the [`DragTarget.on_accept`](https://flet.dev/docs/controls/dragtarget/#on_accept) has
   been renamed to `DragTargetEvent`
 
