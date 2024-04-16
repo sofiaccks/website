@@ -112,15 +112,15 @@ The background [color](/docs/reference/colors) for the table.
 
 ### `border`
 
-The border around the table. An instance of `ft.Border` class.
+The border around the table. 
 
-See [`Container.border`](/docs/controls/container#border) property for more information and examples.
+The value is an instance of [`border.Border`](/docs/reference/types/border) class.
 
 ### `border_radius`
 
 Border corners.
 
-See [`Container.border`](/docs/controls/container#border) property for more information and examples.
+Border radius is an instance of [`border_radius.BorderRadius`](/docs/reference/types/borderradius) class.
 
 ### `checkbox_horizontal_margin`
 
@@ -128,8 +128,11 @@ Horizontal margin around the checkbox, if it is displayed.
 
 ### `clip_behavior`
 
-The content will be clipped (or not) according to this option. See [`Container.clip_behavior`](container#clip_behavior)
-for possible values.
+The content will be clipped (or not) according to this option. 
+
+Property value is [`ClipBehavior`](/docs/reference/types/clipbehavior) enum.
+
+Default is `ANTI_ALIAS` if `border_radius` is not `None`; otherwise `HARD_EDGE`.
 
 ### `column_spacing`
 
@@ -157,7 +160,7 @@ The maximum height of each row (excluding the row that contains column headings)
 
 ### `data_text_style`
 
-The text style for data rows. An instance of [`ft.TextStyle`](text#textstyle-properties) class.
+The text style for data rows. An instance of [`ft.TextStyle`](/docs/controls/text#textstyle-properties) class.
 
 ### `divider_thickness`
 
@@ -185,7 +188,7 @@ The height of the heading row.
 
 ### `heading_text_style`
 
-The text style for the heading row. An instance of [`ft.TextStyle`](text#textstyle-properties) class.
+The text style for the heading row. An instance of [`ft.TextStyle`](/docs/controls/text#textstyle-properties) class.
 
 ### `horizontal_lines`
 

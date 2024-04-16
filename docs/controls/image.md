@@ -58,7 +58,7 @@ ft.app(target=main)
 
 ### `border_radius`
 
-Clip image to have rounded corners. See [`Container.border_radius`](container#border_radius) for more information and examples.
+Clip image to have rounded corners. See [`Container.border_radius`](/docs/controls/container#border_radius) for more information and examples.
 
 ### `color`
 
@@ -70,7 +70,7 @@ Used to combine `color` with the image.
 
 The default is `BlendMode.COLOR`. In terms of the blend mode, color is the source and this image is the destination.
 
-See [`ShaderMask.blend_mode`](shadermask#blend_mode) for possible blend mode values.
+See [`ShaderMask.blend_mode`](/docs/controls/shadermask#blend_mode) for possible blend mode values.
 
 ### `error_content`
 
@@ -92,7 +92,7 @@ When building for the web using the `html` WebRenderer, filter quality has no ef
 
 How to inscribe the image into the space allocated during layout.
 
-Property value is `ImageFit` enum with supported values: `NONE` (default), `CONTAIN`, `COVER`, `FILL`, `FIT_HEIGHT`, `FIT_WIDTH`, `SCALE_DOWN`.
+The value is [`ImageFit`](/docs/reference/types/imagefit) enum. Default is `NONE`.
 
 ### `gapless_playback`
 
@@ -167,7 +167,7 @@ On Windows you can use PowerShell to encode string into Base64 format:
 
 How to paint any portions of the layout bounds not covered by the image.
 
-Property value is `ImageRepeat` enum with supported values: `NO_REPEAT` (default), `REPEAT`, `REPEAT_X`, `REPEAT_Y`.
+The value is [`ImageRepeat`](/docs/reference/types/imagerepeat) enum. Default is `NO_REPEAT`.
 
 ### `semantics_label`
 
