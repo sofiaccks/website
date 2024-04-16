@@ -24,7 +24,7 @@ The goal: Flet 1.0 launch.
 ### New controls
 
 * :white_check_mark: [AudioRecorder](https://flet.dev/docs/controls/audiorecorder)
-* [Autocomplete](https://github.com/flet-dev/flet/issues/791)
+* :white_check_mark: [Autocomplete](https://github.com/flet-dev/flet/issues/791)
 * [AutofillGroup](https://github.com/flet-dev/flet/issues/848)
 * [Camera](https://github.com/flet-dev/flet/issues/1281)
 * [Context menu](https://github.com/flet-dev/flet/issues/1804)
@@ -35,7 +35,7 @@ The goal: Flet 1.0 launch.
 * :white_check_mark: [Lottie](https://flet.dev/docs/controls/lottie)
 * [Map](https://github.com/flet-dev/flet/issues/1193)
 * [PlatformMenuBar](https://github.com/flet-dev/flet/issues/285) (and [#116](https://github.com/flet-dev/flet/issues/116))
-* [Rive](https://github.com/flet-dev/flet/issues/89)
+* :white_check_mark: [Rive](https://github.com/flet-dev/flet/issues/89)
 * [SliverAppBar](https://github.com/flet-dev/flet/issues/1843)
 * [TreeView](https://github.com/flet-dev/flet/issues/961)
 * :white_check_mark: [Video](https://flet.dev/docs/controls/video)

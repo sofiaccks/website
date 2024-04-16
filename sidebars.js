@@ -370,6 +370,7 @@ module.exports = {
             "reference/cli/publish",
           ],
         },
+        "reference/environment-variables",
         {
           type: "category",
           label: "Types",
@@ -402,7 +403,7 @@ module.exports = {
             "reference/types/thememode",
             "reference/types/urltarget",
           ],
-        }
+        },
       ],
     }
   ],
