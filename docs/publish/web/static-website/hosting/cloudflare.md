@@ -109,3 +109,36 @@ To enable detailed Flet logging add this to your program:
 import logging
 logging.basicConfig(level=logging.DEBUG)
 ```
+import flet
+
+# Crear la ventana principal
+window = flet.Window(title='Ejercicio Semana 12', width=600, height=400)
+
+# Título del ejercicio semana 12 (centrado)
+title_label = flet.Label(parent=window, text='Título ejercicio semana 12', align='center')
+
+# Párrafo sobre la historia de la PC (centrado)
+history_label = flet.Label(parent=window, text='Párrafo sobre la historia de la PC', align='center')
+
+# Cuadro de botones y texto
+button1 = flet.Button(parent=window, text='Botón 1')
+button2 = flet.Button(parent=window, text='Botón 2')
+text_box = flet.TextBox(parent=window)
+
+# Texto junto al cuadro de botones
+text1_label = flet.Label(parent=window, text='Texto 1')
+text2_label = flet.Label(parent=window, text='Texto 2')
+text3_label = flet.Label(parent=window, text='Texto 3')
+
+# Posicionamiento de los elementos en la ventana
+title_label.move_to(0, 50)
+history_label.move_to(0, 100)
+button1.move_to(200, 200)
+button2.move_to(300, 200)
+text_box.move_to(400, 200)
+text1_label.move_to(200, 250)
+text2_label.move_to(300, 250)
+text3_label.move_to(400, 250)
+
+# Mostrar la ventana
+window.show()
